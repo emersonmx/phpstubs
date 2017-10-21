@@ -19,6 +19,6 @@ rm -rf $code_path
 unzip -q -j $download_path "netbeans/php/phpstubs/phpruntime/*" -d $code_path/
 
 echo 'Generating tags...'
-ctags --fields=+aimlS --languages=php $code_path
+ctags --fields=+aimlS --languages=php --tag-relative=never -R $code_path
 
 echo 'Done'
